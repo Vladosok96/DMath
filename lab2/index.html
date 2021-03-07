@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab2</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+	<script type="text/javascript" src="scripts/js.js"></script>
+	<form onsubmit="run(); return false;"><p>Размерность <input type="text" value="5" id="size-field"><br></p>
+	<textarea name="comment" cols="40" rows="7" placeholder="Введите сюда координаты" id="input-field"></textarea>
+	<textarea name="comment" cols="40" rows="7" readonly id="output-field">Здесь будет матрица</textarea><br>
+	<input type="submit" name="submit-btn" value="ЗАПУСК"></form>
+	<p>Рефлексивность <span id="refl"></span></p>
+	<p>Антирефлексивность <span id="arefl"></span></p>
+	<p>Симметричность <span id="simm"></span></p>
+	<p>Антисимметричность <span id="asimm"></span></p>
+	<p>Кососимметричность <span id="csimm"></span></p>
+	<p>Транзитивность <span id="trans"></span></p>
+</body>
+</html>
