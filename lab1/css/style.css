@@ -1,0 +1,80 @@
+@font-face{
+	font-family: 'Futura';
+	src: url('../fonts/FuturaMediumC.eot');
+	src: url('../fonts/FuturaMediumC.eot?iefix') format('eot'),
+	url('../fonts/FuturaMediumC.woff') format('woff'),
+	url('../fonts/FuturaMediumC.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	background-color: black;
+	color: white;
+	padding-top: 50px;
+}
+
+.conteiner > p, .conteiner > h1 {
+	text-align: center;
+	font-family: Futura,sans-serif;
+	text-transform: uppercase;
+}
+
+form {
+	background-color: white;
+	width: 315px;
+	height: 250px;
+	margin: 0 auto;
+	border-radius: 25px;
+	padding: 8px 25px;
+	box-sizing: border-box;
+	color: #9aa3a7;
+}
+
+input {
+	margin: -2px auto 15px;
+	padding-left: 10px; 
+	display: block;
+	border-radius: 50px;
+	height: 30px;
+	width: 250px;
+	background-color: #e4e6e8;
+	border: none;
+	text-rendering: auto;
+	font-family : inherit;
+	font-family: Futura,sans-serif;
+	font-size: 18px;
+    font-weight: 500
+}
+
+input[type="submit"] {
+	width: 200px;
+	height: 30px;
+	margin-top: 15px;
+	background: #000000;
+	color: white;
+}
+
+input:active, input:focus {
+		outline: none;
+}
+
+article {
+	margin-bottom: 3px;
+	font-family: Futura,sans-serif;
+	text-transform: uppercase;
+}
+
+.result-paragraph {
+	margin: 30px auto;
+	padding: 0 auto;
+	width: 450px;
+	height: 200px;
+}
+
+.result {
+	display: inline-block;
+	padding: 2px;
+	color: black;
+	background-color: white;
+}

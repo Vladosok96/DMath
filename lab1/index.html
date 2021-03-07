@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>lab1</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<script type="text/javascript" src="script/main.js"></script>
+    <div class="conteiner">
+    	<h1>нечетная|цифра|четная|буква</h1>
+	    <form onsubmit="submitello();return false;">
+	        <p>
+	            <article>1 число<br><input type="text" id="input1" pattern="([13579][0-9][02468][A-Za-z]\s?)*"></article>
+	            <article>2 число<br><input type="text" id="input2" pattern="([13579][0-9][02468][A-Za-z]\s?)*"></article>
+	            <article><b>Никому не сообщайте свои личные данные!</b></article>
+	            <article><input type="submit" value="ЗАПУСК"></article>
+	        </p>
+	    </form>
+	    <div class="result-paragraph">
+	       	<article>объединение <span class="result" id="combination">none</span></article>
+	        <article>пересечение <span class="result" id="intersection">none</span></article>
+	        <article>дополнение <span class="result" id="addition">none</span></article>
+	        <article>симметрическая разность <span class="result" id="difference">none</span></article>
+	    </div>
+	</div>
+</body>
+</html>
