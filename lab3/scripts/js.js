@@ -3,16 +3,26 @@ function run() {
 	console.log(inputData);
 
 	let arrWidth = inputData[0].split(" ").length;
-	let isVald = true;
-	for (let i = 1; i < inputData.length; i++) {
-		let splitPieceOfData = inputData[i].split(" ")
+	let Vald = 0;
+	for (let i = 0; i < inputData.length; i++) {
+		let splitPieceOfData = inputData[i].split(" ");
+
+		for (let j = 0; j < splitPieceOfData.length; j++) {
+			if (!(splitPieceOfData[j] == 0 || splitPieceOfData[j] == 1)){
+				Vald = 1;
+			}
+		}
+
 		if (splitPieceOfData.length != arrWidth) {
-			isVald = false;
+			Vald = 2;
 		}
 	}
 
-	if (isVald) {
+	if (Vald == 0) {
 		
+	}
+	else if (Vald == 1){
+		alert("В матрице не может быть элементов, отличных от нуля или единицы!");
 	}
 	else {
 		alert("Матрица не прямоугольная!");
