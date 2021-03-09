@@ -21,15 +21,15 @@ function run() {
 	if (Vald == 0) {
 		let checkY = true;
 		for (let i = 0; i < inputData.length; i++) {
-			let checkX = false;
+			let checkX = 0;
 			let splitPieceOfData = inputData[i].split(" ");
 			for (let j = 0; j < arrWidth; j++) {
 				if (splitPieceOfData[j] == 1) {
-					checkX = true;
+					checkX++;
 				}
 			}
 
-			if (!checkX) {
+			if (checkX != 1) {
 				checkY = false;
 			}
 		}
