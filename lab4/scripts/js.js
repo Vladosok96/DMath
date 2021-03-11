@@ -31,7 +31,23 @@ function run() {
 	if (Vald == 0) {
 		for (let iter = 0; iter < inputData.length; iter++) {
 			var arrayTmp = array;
-			console.log(arrayTmp);
+			
+			for (let i = 0; i < inputData.length; i++) {
+				for (let j = 0; j < inputData.length; j++) {
+					if (!isNaN(array[i][iter]) && !isNaN(array[iter][j])) {
+						let tmpInt = parseInt(array[i][iter], 10) + parseInt(array[iter][j], 10);
+						if (tmpInt < array[i][j] || array[i][j] == "i") {
+							console.log(array[i][j]);
+							console.log(array[i][iter]);
+							console.log(array[iter][j]);
+							console.log("");
+							array[i][j] = tmpInt;
+						}
+					}
+				}
+			}
+
+		console.log(array);
 		}
 	}
 	else if (Vald == 1){
