@@ -2,18 +2,17 @@ function run() {
 	let inputData = document.getElementById("input-field").value.split("\n");
 	console.log(inputData);
 
-	let arrWidth = inputData[0].split(" ").length;
 	let Vald = 0;
 	for (let i = 0; i < inputData.length; i++) {
 		let splitPieceOfData = inputData[i].split(" ");
 
 		for (let j = 0; j < splitPieceOfData.length; j++) {
-			if (Number.isInteger(splitPieceOfData[j])){
+			if (isNaN(splitPieceOfData[j]) && splitPieceOfData[j] != "i"){
 				Vald = 1;
 			}
 		}
 
-		if (splitPieceOfData.length != arrWidth) {
+		if (splitPieceOfData.length != inputData.length) {
 			Vald = 2;
 		}
 	}
@@ -22,9 +21,9 @@ function run() {
 		
 	}
 	else if (Vald == 1){
-		alert("В матрице не может быть элементов, отличных от нуля или единицы!");
+		alert("В матрице могут быть только числа либо буква \"i\"!");
 	}
 	else {
-		alert("Матрица не прямоугольная!");
+		alert("Матрица должна быть квадратной!");
 	}
 }
