@@ -7,12 +7,17 @@
 </head>
 <body>
 	<script type="text/javascript" src="scripts/js.js"></script>
+
 	<form onsubmit="run(); return false;">
-		<textarea name="comment" cols="40" rows="7" placeholder="Введите сюда матрицу" id="input-field"></textarea><br>
+		<p>Введите в поле матрицу расстояний.<br>Ячейки, в которых отсутствует связь между точками заполняются символом "i" (infinite).</p>
+		<textarea name="comment" cols="40" rows="7" placeholder="Введите сюда матрицу" id="input-field">i i 3 i
+2 i i i
+i 7 i 1
+6 i i i</textarea><br>
 		Откуда <input type="text" id="a-input"><br>
 		Докуда <input type="text" id="b-input"><br>
 		<input type="submit" name="submit-btn" value="ЗАПУСК">
 	</form>
-	<p>расстояние от точки <span id="a"></span> до <span id="b"></span> равно <span id="result"></span></p>
+	<p>Расстояние от точки <span id="a"></span> до <span id="b"></span> равно <span id="result"></span></p>
 </body>
 </html>
