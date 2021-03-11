@@ -2,8 +2,9 @@ function run() {
 	let inputData = document.getElementById("input-field").value.split("\n");
 	console.log(inputData);
 
-	size = inputData.length;
+	let size = inputData.length;
 	var array = new Array(size);
+	let tmpInt
 
 	let Vald = 0;
 	for (let i = 0; i < inputData.length; i++) {
@@ -35,12 +36,8 @@ function run() {
 			for (let i = 0; i < inputData.length; i++) {
 				for (let j = 0; j < inputData.length; j++) {
 					if (!isNaN(array[i][iter]) && !isNaN(array[iter][j])) {
-						let tmpInt = parseInt(array[i][iter], 10) + parseInt(array[iter][j], 10);
+						tmpInt = parseInt(array[i][iter], 10) + parseInt(array[iter][j], 10);
 						if (tmpInt < array[i][j] || array[i][j] == "i") {
-							console.log(array[i][j]);
-							console.log(array[i][iter]);
-							console.log(array[iter][j]);
-							console.log("");
 							array[i][j] = tmpInt;
 						}
 					}
@@ -48,6 +45,19 @@ function run() {
 			}
 
 		console.log(array);
+		}
+
+		let a, b;
+		a = document.getElementById("a-input").value;
+		b = document.getElementById("b-input").value;
+
+		document.getElementById("a").innerHTML = a;
+		document.getElementById("b").innerHTML = b;
+		if (array[a - 1][b - 1] != "i") {
+			document.getElementById("result").innerHTML = array[a - 1][b - 1];
+		}
+		else {
+			document.getElementById("result").innerHTML = "нет дороги";
 		}
 	}
 	else if (Vald == 1){
