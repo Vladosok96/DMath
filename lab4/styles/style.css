@@ -1,0 +1,8 @@
+textarea {
+	resize: none;
+}
+
+span {
+	text-transform: uppercase;
+	font-weight: bold;
+}
