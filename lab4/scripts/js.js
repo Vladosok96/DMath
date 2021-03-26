@@ -13,7 +13,7 @@ function run() {
 		array[i] = new Array(size);
 
 		for (let j = 0; j < splitPieceOfData.length; j++) {
-			if (isNaN(splitPieceOfData[j]) && splitPieceOfData[j] != "i"){
+			if (isNaN(splitPieceOfData[j]) && splitPieceOfData[j] != "z"){
 				Vald = 1;
 			}
 			else if (i == j) {
@@ -37,7 +37,7 @@ function run() {
 				for (let j = 0; j < inputData.length; j++) {
 					if (!isNaN(array[i][iter]) && !isNaN(array[iter][j])) {
 						tmpInt = parseInt(array[i][iter], 10) + parseInt(array[iter][j], 10);
-						if (tmpInt < array[i][j] || array[i][j] == "i") {
+						if (tmpInt < array[i][j] || array[i][j] == "z") {
 							array[i][j] = tmpInt;
 						}
 					}
@@ -60,7 +60,7 @@ function run() {
 		else {
 			document.getElementById("a").innerHTML = a;
 			document.getElementById("b").innerHTML = b;
-			if (array[a - 1][b - 1] != "i") {
+			if (array[a - 1][b - 1] != "z") {
 				document.getElementById("result").innerHTML = array[a - 1][b - 1];
 			}
 			else {
@@ -69,7 +69,7 @@ function run() {
 		}		
 	}
 	else if (Vald == 1){
-		alert("В матрице могут быть только числа либо буква \"i\"!");
+		alert("В матрице могут быть только числа либо буква \"z\"!");
 	}
 	else {
 		alert("Матрица должна быть квадратной!");
