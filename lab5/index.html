@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Lab4</title>
+	<title>Lab5</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
 	<script type="text/javascript" src="scripts/js.js"></script>
-
+	<h1>Получение матрицы достижимости при помощи алгоритма Флойда.</h1>
 	<form onsubmit="run(); return false;">
 		<p>Введите в поле матрицу расстояний.<br>Ячейки, в которых отсутствует связь между точками заполняются символом "z".</p>
 		<textarea name="comment" cols="40" rows="7" placeholder="Введите сюда матрицу" id="input-field">z z 3 z
 2 z z z
 z 7 z 1
-6 z z z</textarea><br>
-		Откуда <input type="text" id="a-input"><br>
-		Докуда <input type="text" id="b-input"><br>
+6 z z z</textarea>
+		<textarea name="comment" cols="40" rows="7" readonly placeholder="Здесь будет матрица достижимости" id="output-field"></textarea><br>
 		<input type="submit" name="submit-btn" value="ЗАПУСК">
 	</form>
-	<p>Расстояние от точки <span id="a"></span> до <span id="b"></span> равно <span id="result"></span></p>
 </body>
 </html>
