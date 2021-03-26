@@ -8,7 +8,7 @@ function run() {
 
 	let Vald = 0;
 	for (let i = 0; i < inputData.length; i++) {
-		let splitPieceOfData = inputData[i].split(" ").split(" ").filter(elem => elem != false);
+		let splitPieceOfData = inputData[i].split(" ").filter(elem => elem != false);
 
 		array[i] = new Array(size);
 
