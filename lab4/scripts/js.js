@@ -51,14 +51,22 @@ function run() {
 		a = document.getElementById("a-input").value;
 		b = document.getElementById("b-input").value;
 
-		document.getElementById("a").innerHTML = a;
-		document.getElementById("b").innerHTML = b;
-		if (array[a - 1][b - 1] != "i") {
-			document.getElementById("result").innerHTML = array[a - 1][b - 1];
+		if (a > size || b > size) {
+			alert("Bruh, у нас всего " + size + " элементов, надо бы поменьше")
+		}
+		else if (a < 1 || b < 1) {
+			alert("Bruh, у нас элементы считаются с первого, надо бы побольше")
 		}
 		else {
-			document.getElementById("result").innerHTML = "нет дороги";
-		}
+			document.getElementById("a").innerHTML = a;
+			document.getElementById("b").innerHTML = b;
+			if (array[a - 1][b - 1] != "i") {
+				document.getElementById("result").innerHTML = array[a - 1][b - 1];
+			}
+			else {
+				document.getElementById("result").innerHTML = "нет дороги";
+			}
+		}		
 	}
 	else if (Vald == 1){
 		alert("В матрице могут быть только числа либо буква \"i\"!");
